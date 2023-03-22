@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+/* base styles */
+* {
+  margin: 0;
+  font-family: "Quicksand";
+  color: #252422;
+  background-color: lightgrey;
+}
+.content {
+  max-width: 400px;
+  margin: 0px auto;
+}
+.todos{
+  display: grid;
+  grid-template-rows: 60px 1fr 150px;
+}
+.header{
+  display: flex;
+  /* gap: 5px; */
+  align-items: center;
+}
+.header > *{
+  width: 50%;
+  padding-left: 10px;
+}
+.main{
+  max-height: calc(100vh - 290px);
+  min-height: 280px;
+  overflow: auto;
+}
+.footer{
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(5,1fr);
+  grid-template-rows: repeat(2,1fr);
+}
+.footer > input{
+  grid-area: 1/1/2/4;
+}
+.footer button:nth-child(2) {
+  grid-area: 1/4/2/6;
+}
+.footer > p{
+  grid-area: 2/1/3/3;
+  padding-left: 10px;
+}
+.footer button:nth-child(4) {
+  grid-area: 2/3/3/6;
+}
+.todo{
+  display: flex;
+  align-items: center;
+  /* justify-content: space-evenly ; */
+  justify-content: flex-start;
+  /* flex-wrap: wrap; */
+  padding: 10px;
+  margin: 10px;
+  font-size: 20px;
+  border-radius: 10px;
+  background-color: #fff;
+}
+.todo .title{
+  margin: auto;
+}
+.todo .button{
+  height: 50px;
+  background-color: #fff;
+  border: 1px solid #e63946;
+  margin-left: auto;
+}
+.todo .button:hover{
+  height: 50px;
+  color: #fff;
+  background-color: #e63946;
+  border: 1px solid rgb(255, 255, 255);
+}
+.button{
+  font-size: 20px;
+  border-radius: 8px;
+  border: 1px solid #0f4c5c;
+  margin: 0px;
+  padding: 8px;
+  cursor: pointer;
+  transition: all 1000ms ;
+}
+.button:hover{
+  /* border-radius: 10px; */
+  background-color: #0f4c5c;
+  color: #fff;
+  transform: scale(1.05);
+}
+.todos input{
+  border:0;
+  height: 30px;
+  margin: 15px;
+  padding: 5px;
+  background-color: #e9ecef;
+  border-radius: 5px;
+  font-size: large;
+}
+.todo:hover {
+  box-shadow: 1px 3px 5px #0000001a;
+}
+.todo span{
+  background-color: #fff;
+  width: min-content;
+  padding: 0;
+  margin: 0;
+}
+input[type='checkbox'] {
+   width: 18px;
+   cursor: pointer;
+}
+input[type='checkbox']:checked ~ div {
+  text-decoration: line-through;
+}
+input[type='text']:focus {
+  outline: 1px solid #0f4c5c;
+}
+span.error{
+  color: #e63946;
+  position: relative;
+  bottom: 93px;
+  margin: auto;
+  background: initial;
+}
+.todos label{
+  display: flex;
+  align-items: center;
+}
+p.copyright{
+  font-size: small;
+  width: 200px;
+  margin: auto;
+}
+h1{
+  padding: 8px;
+  width: min-content;
+  color: #e63946;
+  margin: auto;
+}
+
+/* google icon  */
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
+  color: #e63946;
+  position: relative;
+  top: 5px;
+  padding: 3px;
+}
